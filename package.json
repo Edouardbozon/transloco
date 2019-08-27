@@ -11,6 +11,8 @@
     "start": "ng serve --port 8889 --open",
     "build": "ng build --prod && cp _redirects dist/transloco-playground/",
     "build:lib": "ng build @ngneat/transloco && npm run schematics:build && npm run copy",
+    "build:message-format": "ng build @ngneat/transloco-message-format",
+    "test:message-format": "ng test @ngneat/transloco-message-format",
     "build:persist-lang": "ng build @ngneat/transloco-persist-lang",
     "build:persist-translations": "ng build @ngneat/transloco-persist-translations",
     "test": "ng test @ngneat/transloco",

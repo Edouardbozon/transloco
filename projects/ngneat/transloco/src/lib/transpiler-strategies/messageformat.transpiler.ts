@@ -3,6 +3,8 @@ import { HashMap, Translation } from '../types';
 
 import * as MessageFormat from 'messageformat';
 
+// TODO: remove for version 2.0 along with messageformat dependency.
+// @deprecated
 export class MessageFormatTranspiler implements TranslocoTranspiler {
   defaultTranspiler: DefaultTranspiler = new DefaultTranspiler();
   //@ts-ignore

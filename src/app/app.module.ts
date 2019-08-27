@@ -1,7 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 import {
   MessageFormatTranspiler,
   TRANSLOCO_CONFIG,
@@ -9,17 +8,15 @@ import {
   TranslocoConfig,
   TranslocoModule
 } from '@ngneat/transloco';
-import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './home/home.component';
-import { OnPushComponent } from './on-push/on-push.component';
-import { HttpLoader, httpLoader } from './loaders/http.loader';
-import { environment } from '../environments/environment';
+import { TranslocoMessageFormatModule } from '@ngneat/transloco-message-format';
 import { TRANSLOCO_PERSIST_LANG_STORAGE, TranslocoPersistLangModule } from '@ngneat/transloco-persist-lang';
+import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { getLangFn } from './getLang';
-import {
-  PERSIST_TRANSLATIONS_STORAGE,
-  TranslocoPersistTranslationsModule
-} from '@ngneat/transloco-persist-translation';
+import { HomeComponent } from './home/home.component';
+import { httpLoader } from './loaders/http.loader';
+import { OnPushComponent } from './on-push/on-push.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, OnPushComponent],
@@ -34,7 +31,8 @@ import {
         provide: TRANSLOCO_PERSIST_LANG_STORAGE,
         useValue: localStorage
       }
-    })
+    }),
+    TranslocoMessageFormatModule
     // TranslocoPersistTranslationsModule.init({
     //   loader: HttpLoader,
     //   storage: {
@@ -58,8 +56,8 @@ import {
           'transpilers/messageformat': 'mf'
         }
       } as TranslocoConfig
-    },
-    { provide: TRANSLOCO_TRANSPILER, useClass: MessageFormatTranspiler }
+    }
+    // { provide: TRANSLOCO_TRANSPILER, useClass: MessageFormatTranspiler }
   ],
   bootstrap: [AppComponent]
 })
