@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/ngneat/transloco/compare/v1.4.0...v1.4.1) (2019-08-27)
+
+### Bug Fixes
+
+- 🐛 migration script support for get function ([67e112d](https://github.com/ngneat/transloco/commit/67e112d))
+
 ## [1.4.0](https://github.com/ngneat/transloco/compare/v1.2.0...v1.4.0) (2019-08-27)
 
 ### Bug Fixes

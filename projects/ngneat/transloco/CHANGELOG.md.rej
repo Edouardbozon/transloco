@@ -1,0 +1,6 @@
+diff a/projects/ngneat/transloco/CHANGELOG.md b/projects/ngneat/transloco/CHANGELOG.md	(rejected hunks)
+@@ -10,3 +9 @@ All notable changes to this project will be documented in this file. See [standa
+-* 🐛 migration script support for get function ([67e112d](https://github.com/ngneat/transloco/commit/67e112d))
+-
+-
++- 🐛 migration script support for get function ([67e112d](https://github.com/ngneat/transloco/commit/67e112d))
